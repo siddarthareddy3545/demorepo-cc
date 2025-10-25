@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Launch EC2 instance using CloudFormation
+
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0f918f7e67a3323f0
+      InstanceType: t2.micro
+      KeyName: aws-login
+      SecurityGroupIds:
+        - sg-0391fa998626c9fbd
+      Tags:
+        - Key: rp-one
+          Value: lt-0a4d4426ce9c27011
+
